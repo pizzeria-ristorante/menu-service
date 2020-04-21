@@ -9,10 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.pizzeria</groupId>
-    <artifactId>ristorante</artifactId>
+    <artifactId>menu-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ristorante</name>
-    <description>Demo project for Spring Boot</description>
+    <name>menu-service</name>
 
     <properties>
         <java.version>1.8</java.version>
