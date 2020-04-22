@@ -30,7 +30,7 @@ public class MenuServiceRestController {
         log.info("Found total of {} menu entries and for name: {}", allMenuEntries.size(), name);
         return allMenuEntries
                 .stream()
-                .filter(menuItem -> name.isPresent() ? menuItem.getName().equals(name.get()) : true)
+                .filter(menuItem -> name.isPresent() ? menuItem.getName().equalsIgnoreCase(name.get()) : true)
                 .map(this::mapToDto)
                 .collect(Collectors.toSet());
     }

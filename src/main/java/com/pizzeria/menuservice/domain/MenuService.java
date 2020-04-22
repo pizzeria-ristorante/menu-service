@@ -17,12 +17,17 @@ public class MenuService {
     @PostConstruct
     private void postConstruct() {
         addMenuEntry("Salami", new IngredientItem("Salami", 2));
-        addMenuEntry("Funghi", new IngredientItem("Funghi", 2));
-        addMenuEntry("Funghi Porcini", new IngredientItem("Funghi Porcini", 3));
+        addMenuEntry("Funghi", new IngredientItem("Pilze", 2));
+        addMenuEntry("Funghi Porcini", new IngredientItem("Steinpilze", 3));
         addMenuEntry("Gorgonzola", new IngredientItem("Gorgonzola", 2));
         addMenuEntry("Napoli", new IngredientItem("Sardellen", 3));
         addMenuEntry("Margherita");
-        addMenuEntry("Quattro Staggioni", new IngredientItem("Salami", 1), new IngredientItem("Prosciutto", 1), new IngredientItem("Funghi", 1), new IngredientItem("Ananas", 1));
+        addMenuEntry("Quattro Staggioni", new IngredientItem("Salami", 1), new IngredientItem("Schinken", 1), new IngredientItem("Pilze", 1), new IngredientItem("Ananas", 1));
+        addMenuEntry("Alio e Olio", new IngredientItem("Knoblauch", 1), new IngredientItem("Oel", 1));
+        addMenuEntry("Regina", new IngredientItem("Schinken", 1), new IngredientItem("Pilze", 2));
+        addMenuEntry("Tonno", new IngredientItem("Thunfisch", 1), new IngredientItem("Zwiebeln", 2));
+        addMenuEntry("Hawaii", new IngredientItem("Schinken", 1), new IngredientItem("Ananas", 2));
+        addMenuEntry("de la casa", new IngredientItem("scharfe Salami", 2), new IngredientItem("Steinpilze", 2), new IngredientItem("Bueffelmozzarella", 2));
     }
 
     public Iterable<MenuEntry> getAllMenuEntries() {
@@ -34,7 +39,7 @@ public class MenuService {
     }
 
     private void addMenuEntry(String name, IngredientItem... items) {
-        List<IngredientItem> base = Arrays.asList(new IngredientItem("Pizzateig", 1), new IngredientItem("Pomodoro", 2), new IngredientItem("Mozzarella", 1));
+        List<IngredientItem> base = Arrays.asList(new IngredientItem("Pizzateig", 1), new IngredientItem("Tomaten", 2), new IngredientItem("Mozzarella", 1));
         Set<IngredientItem> ingredientItems = new HashSet<>(Arrays.asList(items));
         ingredientItems.addAll(base);
         int currentId = menu_card.keySet().stream().max(Integer::compare).orElse(0);
