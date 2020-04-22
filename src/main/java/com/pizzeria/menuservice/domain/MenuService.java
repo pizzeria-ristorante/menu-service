@@ -20,6 +20,9 @@ public class MenuService {
         addMenuEntry("Funghi", new IngredientItem("Funghi", 2));
         addMenuEntry("Funghi Porcini", new IngredientItem("Funghi Porcini", 3));
         addMenuEntry("Gorgonzola", new IngredientItem("Gorgonzola", 2));
+        addMenuEntry("Napoli", new IngredientItem("Sardellen", 3));
+        addMenuEntry("Margherita");
+        addMenuEntry("Quattro Staggioni", new IngredientItem("Salami", 1), new IngredientItem("Prosciutto", 1), new IngredientItem("Funghi", 1), new IngredientItem("Ananas", 1));
     }
 
     public Iterable<MenuEntry> getAllMenuEntries() {
