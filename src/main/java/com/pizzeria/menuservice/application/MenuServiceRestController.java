@@ -27,7 +27,7 @@ public class MenuServiceRestController {
         Iterable<MenuEntry> menuEntries = menuService.getAllMenuEntries();
         Set<MenuEntry> allMenuEntries = new HashSet<>();
         menuEntries.forEach(allMenuEntries::add);
-        log.info("Found total of {} menu entries.", allMenuEntries.size());
+        log.info("Found total of {} menu entries and for name: {}", allMenuEntries.size(), name);
         return allMenuEntries
                 .stream()
                 .filter(menuItem -> name.isPresent() ? menuItem.getName().equals(name.get()) : true)
